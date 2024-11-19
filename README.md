@@ -1,29 +1,30 @@
 # Edge AI-Based Sound Surveillance and Alert Recognition System
 
 ## Project Overview
-The **Edge AI-Based Sound Surveillance and Alert Recognition System** is an embedded solution developed for real-time sound classification. This project uses a lightweight machine learning (ML) model implemented on an STM32 microcontroller to distinguish between different sound types, including sirens, human cries, and general noise. The system is built using **NanoEdge AI Studio** for training and optimization, with **audio sensors** collecting sound data for real-time analysis.
+The **Edge AI-Based Sound Surveillance and Alert Recognition System** is an embedded, AI-driven solution designed for real-time sound classification and alert generation. This project aims to identify sound events, such as sirens, human cries, and general noise, using an STM32 microcontroller and an optimized machine learning model trained via **NanoEdge AI Studio**. The system processes data locally, ensuring minimal latency and improved privacy.
 
-## Features
-- **Real-Time Sound Classification**: Identifies sound categories and displays results in real-time.
-- **Optimized ML Model**: Deploys an SVM model designed for efficiency on embedded hardware.
-- **Low-Latency Processing**: Conducts all processing on the STM32 microcontroller to avoid data transmission delays.
-- **OLED Display Output**: Shows detected sound classes and levels on an integrated display.
-- **Sound Intensity Measurement**: Employs an LM393 audio sensor to measure sound levels and display them via a servo motor.
+## Key Features
+- **Real-Time Audio Classification**: Detects sound types and outputs results in real-time with low latency.
+- **Embedded ML Implementation**: Runs an SVM model on an STM32 microcontroller for efficient sound classification.
+- **Sound Intensity Measurement**: Utilizes an **LM393 audio sensor** to gauge sound intensity, complemented by visual feedback via a **servo motor**.
+- **User Interface**: Integrates an **OLED display** for immediate feedback on the detected sound category.
+- **Data Privacy**: Local processing eliminates the need for data transmission to external servers.
 
 ## System Components
 ### Hardware
-- **STM32 F401RE Microcontroller**: Runs the ML model and manages system operations.
-- **LM393 Audio Sensor**: Collects sound intensity data for classification.
-- **Microphone**: Captures audio data for ML model input.
-- **OLED Display**: Provides visual feedback of detected sound categories.
-- **Servo Motor**: Indicates sound intensity in a physical, easy-to-understand format.
+- **STM32 F401RE Microcontroller**: Serves as the processing unit for ML inference and system management.
+- **LM393 Audio Sensor**: Measures sound level and sends data to the microcontroller for intensity classification.
+- **Microphone**: Captures raw sound data for input into the ML model.
+- **OLED Display**: Displays the detected sound type and classification confidence.
+- **Servo Motor**: Provides a physical representation of sound intensity levels.
 
 ### Software
-- **NanoEdge AI Studio**: Used to train and benchmark the ML model for optimal performance.
-- **C/C++**: Primary programming languages used for firmware development.
-- **STM32CubeIDE**: Development environment for coding, compiling, and debugging the firmware.
+- **NanoEdge AI Studio**: Utilized for ML model training, benchmarking, and optimization.
+- **C/C++ Programming**: Core programming languages for firmware development and embedded logic.
+- **STM32CubeIDE**: Integrated development environment for building and debugging the system's firmware.
 
 ## Installation and Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/edge-ai-sound-surveillance.git
+### Prerequisites
+- **STM32CubeIDE**: Ensure it is installed and configured.
+- **NanoEdge AI Studio**: Used for generating and training ML models.
+- **Git**: For cloning the project repository.
